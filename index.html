@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anne Frank</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+    
+body {
+    background-image:url(photo-1510148199876-8a856ee41d42.jpg);
+    background-size:auto;
+  font-family: Helvetica, sans-serif;
+}
+
+    section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  background-color: #373B44;
+  height: 100vh;
+       background-image:url(Tree-wallpaper-to-use-as-background-12.jpg);
+        background-attachment: local;
+        background-repeat: no-repeat;
+        background-size:cover;
+}
+
+     section:nth-of-type(2n) {
+   /* The image used */
+ background-image:url(brown-texture_1160-722.jpg);
+  /* Set a specific height */
+  height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment:fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+      section:nth-of-type(3n) {
+   /* The image used */
+ background-image:url(brown-grunge-texture_1048-3768.jpg);
+  /* Set a specific height */
+  height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment:local;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+    
+      section:nth-of-type(4n) {
+   /* The image used */
+ background-image:url(brown-texture_1160-722.jpg);
+  /* Set a specific height */
+  height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment:fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+    
+  section:nth-of-type(5n) {
+   /* The image used */
+ background-image:url(CZAmmETW8AEvNQE.jpg);
+  /* Set a specific height */
+  height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+    .icon1{
+        position:relative;
+        top: 50%;
+        left: 38%;
+        
+    }
+    
+     .icon2{
+        position:relative;
+         top:30%;
+        left:68%;
+    
+        
+    }
+     .icon3{
+        position:relative;
+         top:30%;
+       left:51%;
+        
+    }
+
+    .icon4{
+        position:relative;
+         top:-50%;
+        left:87%;
+        
+        
+    }
+
+    .mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+    
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+</style>
+</head>
+<body>
+<header> <h1 style="text-align: center; font-family:cursive; font-size: 500%; color:aliceblue">The Diary of A Young Girl</h1>
+  
+    </header>
+    
+    <!-Section 1 has the tree and icons ->
+    <section>
+        
+         <div class=wrapper>   
+<!-img src="Tree-wallpaper-to-use-as-background-12.jpg" alt="tree" style="width:100%;"->
+             <div class="icon1"><a href=#character><img src="character-girl-icon.png" style="width:14%;"></a></div>
+             <div class="icon2">
+                 <a href=#gallery><img src="g14071-512.png" style="width:20%"></a>
+             </div>
+             <div class="icon3">
+                 <a href=#house><img src="headoffice.PNG" style="width:17%"></a>
+             </div>
+             <div class="icon4"><a href=#june><img src="diary-icon.png" style="width:12%"> </a></div>
+    
+        </div>
+
+    
+    
+    </section>
+
+    <!-Section 2 has the characters ->
+     <section> 
+         <p id="character" style="text-align: center; font-family:sans-serif; color:chocolate; font-size:36px"> <b>Characters </b> </p>
+    
+         <img src="characters-anne-ss.png" width="1000" height="750" usemap="#planetmap" class="center">
+         
+         <map name="planetmap">
+  <area shape="rect" coords="0,0,250,250" href="otto-frank.png">
+ <area shape="rect" coords="250,0,500,250" href="edith-frank.png">
+              <area shape="rect" coords="500,0,750,250" href="margot-frank.png">
+              <area shape="rect" coords="750,0,1000,250" href="anne-ppt-frank.png">
+              <area shape="rect" coords="0,250,250,500" href="van-daaaan.png">
+              <area shape="rect" coords="250,250,500,500" href="final-mrs-vaan.png">
+              <area shape="rect" coords="500,250,750,500" href="final-peter-vaan.png">
+             
+              <area shape="rect" coords="750,250,1000,500" href="dussel.png">
+             
+              <area shape="rect" coords="0,500,250,750" href="miep-1.png">
+              <area shape="rect" coords="250,500,500,750" href="kleiman.png">
+              <area shape="rect" coords="500,500,750,750" href="kurgler-3.png">
+              <area shape="rect" coords="750,500,1000,750" href="bep.png">
+</map>
+         <br>
+         <br>
+         <br>
+    </section>
+    
+    
+    
+    <!-Section 3 has the image gallery ->
+    <section>
+        <p id="gallery" style="text-align: center; font-size:36px" > <b>Image Gallery </b></p>
+        
+        <br>
+     
+        
+        <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="anne-pic.jpg" style="width:100%">
+  <div class="text">Anne Frank</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="anne-house.jpg" style="width:100%">
+  <div class="text">House where they hid for two years</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="anne_franktree.jpeg" style="width:100%">
+  <div class="text">Anne's Tree</div>
+</div>
+            <div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="annes-room.jpg" style="width:100%">
+  <div class="text">Anne Frank's Room</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="peter-anne.jpg" style="width:100%">
+  <div class="text">Peter and Anne</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="anne-grave.jpg" style="width:100%">
+  <div class="text">Anne Frank's Grave</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>
+        <br>
+        <br>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+        
+    
+    </section>
+    
+    
+    
+    <!-Section 4 has the house tour ->
+    
+    <section> 
+    <h2 id="house" style="text-align: center; font-size:36px"> The Secret Annex</h2>
+        
+        <br>
+     
+       
+        <p style="text-align:center; color:black; font-size: 25px;">A house tour of Anne Frank's hiding place. </p>
+    
+   <iframe width="960" height="515" src="https://www.youtube.com/embed/0SJgudCq540" length=1000px; width=900px; frameborder="0" allowfullscreen class="center"></iframe>
+    
+        <br>
+        <br>
+        <br>
+        <br>
+    
+        
+    </section>
+    
+    
+    
+    <!-Section 5 has the timeline ->
+    <section>
+        
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2 id="june">June 14, 1942</h2>
+      <p> 
+          <b>Anne turns 13 and receives a diary as her present.</b> <br> <br> <br>
+          <i>&quot;On Friday, June 12th, I woke up at six o’clock and no wonder; it was my birthday.&quot;</i>
+<br>
+          <br>
+          -Anne’s first diary entry  
+        <br>
+            <br>
+        Anne receives a diary as her 13th birthday gift and starts writing in it.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>June 20, 1942</h2>
+      <p>
+           <b>The diary will be Anne’s only real friend.</b> <br> <br> <br>
+         <i> &quot;Still,&quot; she writes, "what does that matter? I want to write, but more than that, I want to bring out all kinds of things that lie buried deep in my heart."</i>
+          <br>
+          <br>
+          
+          Anne expresses why she wants to keep a diary: she’s lonely. She does have friends (and apparently lots of guys who are in love with her) but no one she can share her secrets with.
+          <br>
+"Kitty"—the name she christens her diary—will be just that friend. 
+        <br>
+        <br>
+        Anne says that life has been hard since 1940 when the Germans moved into Holland. There are lots of laws restricting the freedom of Jews: they have to wear a yellow star, can’t drive cars or bikes, can only go shopping during certain hours of the day, have a nighttime curfew, can’t go to movies, can’t use tennis courts, and so many more things.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>July 5, 1942 </h2>
+      <p>
+           <b>The Franks might go into hiding soon.</b> <br> <br> 
+          Anne and Margot (her sister) get their grades back. 
+        <br>
+        <br>
+        Anne’s dad tells her that they may go into hiding soon. This is the first time Anne has heard about it, but he reminds her that they have been sending furniture into safekeeping for a year. He says they need to go into hiding or else be hauled off by the Germans.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>July 8, 1942 </h2>
+      <p>
+          <b>The Franks go into hiding.</b> <br>  <br>
+          <i> "The first thing I put in was this diary, then hair curlers, handkerchiefs, schoolbooks, a comb, old letters; I put in the craziest things with the idea that we were going into hiding. But I'm not sorry, memories mean more to me than dresses."</i>
+        <br>
+        <br>
+        As if her father was clairvoyant, that very afternoon a member of their family receives "the call-up" from the SS, meaning deportation to a concentration camp is imminent.Mrs. Frank goes to talk with the van Daans, who are going into hiding with the Franks.Margot tells Anne that the call up was for her (Margot) and not for their dad. They start packing their things.
+        <br>
+        <br>
+        That night, the family sends clothes and books with Miep and Jan Gies to bring to the secret hiding spot.Since it’s dangerous for Jews to be seen with suitcases, the next day they dress in three layers of clothing before heading out. Margot goes first with Miep in the early morning, and Anne with her parents following later in the day.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>July 9, 1942</h2>
+      <p>  <b>Layout of the hiding place</b> <br> <br>
+          <img src="Screen%20Shot%202019-02-07%20at%2019.48.49.png" length=1000 width=450>
+        <br>
+        <br>
+        Anne recounts the walk to the hiding place. Her dad says that they were planning on going into hiding on July 16th but had to leave early because of Margot’s call-up. They’ll be hiding in her dad’s office building.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>August 14, 1942</h2>
+      <p><b>The Van Daan family join the Franks in the hiding place. </b> <br> <br>
+          <i> "a rather soft, shy, gawky youth; can't expect much from his company."</i>
+          <br>
+          <br>
+          The van Daans arrive with their cat, Mouschi, on July 13th.
+        <br>
+        <br>
+        Anne describes Peter Vaan Dahn as a shy, gawky, soft boy of 16. She doesn’t think she can expect much from him in terms of friendship.</p>
+    </div>
+  </div>
+      <div class="container left">
+    <div class="content">
+      <h2>August 21, 1942</h2>
+      <p><b>The swinging bookcase. </b> <br> <br> <br>
+          The Secret Annex is properly hidden with a swinging bookcase.
+           <br>
+        <br>
+          <img src="CZAmmETW8AEvNQE.jpg" length=1000 width=450>
+        <br>
+        <br>
+    
+        Anne decides to give herself a holiday from school until September.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>September 25, 1942</h2>
+      <p> <b>Anne dislikes Peter's behaviour. </b> <br> <br>
+          Anne discusses Peter with the van Daans, saying she does not like the way he is always patting her on the cheek. They ask if she can’t love him like a brother, since they apparently think he likes her as a sister. 
+        
+        <br>
+        <br>
+        Pim writes a letter to a man who had hidden some things for the Franks. They insert it in an envelope that came from southern Zeeland, so that it looks like the Franks are out of the country. Quite clever.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>September 28, 1942</h2>
+      <p> <b>“Why do grownups quarrel so much?”  </b> <br> <br>
+          <i>"Anyhow, I've learned one thing now. You only really get to know people when you've had a jolly good row with them. Then and only then can you judge their true characters!"</i> 
+        <br> <br>
+        More fussing and fighting between the adults. Anne believes she is often the subject of discussion—especially about how badly she is being raised.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>October 9, 1942</h2>
+      <p>Anne describes some news she’s gotten from the radio and Miep.
+The Gestapo are treating Jewish people without the least bit of decency or humanity.
+The radio says that people are getting gassed. <br> <br>
+Bep (one of the "protectors" who works in the office) is afraid her boyfriend will be sent to Germany to fight, where he is likely to die. <br> <br>
+Anne reflects how she used to be German, but now Germans and Jews are the greatest of enemies.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>November 9, 1942</h2>
+      <p><i>"'This is not the end. It is not even the beginning of the end. But it is, perhaps, the end of the beginning.'"</i>
+          <br> <br>Peter turns sixteen. <br> <br>
+Mr. van Daan announces that the British have landed in Tunis, Algiers, Casablanca, and Oran. Everybody is saying this is the beginning of the end, but Mr. Churchill says that it is "the end of the beginning."<br> <br>
+While lugging a sack of beans upstairs, Peter accidentally splits one of them and a "hailstorm" of brown beans pours down the stairs all over Anne.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>November 10, 1942</h2>
+      <p>The Secret Annex group decides that, given the situation, they should try to rescue one more Jew. It is just as dangerous for seven people to be hiding as for eight.<br> <br>
+After Mr. Frank rejects the idea of bringing any more of the van Daan family into the Secret Annex, they invite an elderly Jewish dentist, Alfred Dussel, to join them.</p>
+    </div>
+  </div>
+      <div class="container left">
+    <div class="content">
+      <h2>November 17, 1942</h2>
+      <p>Mr. Dussel arrives and is shocked to discover the Franks. He had completely been taken in by the story that they had escaped. <br> <br>
+The van Daans give him a copy of the "Prospectus and Guide to the Secret Annex," which demonstrates that the van Daans do have a sense of humor after all. It’s written like a typical tourist tract and describes the hiding place as if it is a luxury resort for Jews. You should definitely check this part out, if you haven’t already.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>January 13, 1943</h2>
+      <p><i>"I could go on for hours about all the suffering the war has brought, but then I would only make myself more dejected. There is nothing we can do but wait as calmly as we can till the misery comes to an end. Jews and Christians wait, the whole earth waits; and there are many who wait for death."</i> <br> <br>
+        Anne describes the suffering of people outside and considers how selfish the members of the Secret Annex are to talk about what they will do or buy "after the war."</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>May 1, 1943</h2>
+      <p><i> "If I just think of how we live here, I usually come to the conclusion that it is a paradise compared with how other Jews who are not in hiding must be living,"</i>
+        <br> <br> Martial law has been declared in Holland. <br> <br>
+        It’s Mr. Dussel's birthday and he acts all childish and excited about it.
+Mr. Dussel turns out to be pretty selfish. He’s hiding all kinds of good food (like bread and cheese), which he keeps for himself. Anne thinks he acts ungrateful considering they saved him. He also isn’t at all generous with the protectors.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>June 13, 1943</h2>
+      <p>Anne turns fourteen and receives a birthday poem from Pim (her nickname for her father). <br> <br>
+The poem is in the diary and it’s very sweet. Basically her dad acknowledges that they’ve all been a nagging pain to Anne and asks her to please put up with them. The poem shows that he sees what’s going on with her pretty well. <br> <br>
+Anne also gets a big fat Greek and Roman mythology book, which she’s psyched about.
+</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>July 23, 1943</h2>
+      <p>Anne describes the first thing each person wants when they get out of the Secret Annex: <br> <br>
+Mr. and Mrs. van Daan: a hot bath. <br> <br>
+Mr. Dussel: to see his girlfriend. <br> <br>
+Mrs. Frank: a cup of real coffee.<br> <br>
+Mr. Frank: to see Mr. Voskuijl (the nice guy who is dying of cancer). <br> <br>
+Peter: to go downtown. <br> <br>
+Anne: for her family to have a home of their own again so she can move about freely.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>November 8, 1943</h2>
+      <p><i> "I see the eight of us with our 'Secret Annexe' as if we were a little piece of blue heaven, surrounded by heavy black rain clouds. The round, clearly defined spot where we stand is still safe, but the clouds gather more closely about us and the circle which separates us from the approaching danger closes more and more tightly. Now we are so surrounded by danger and darkness that we bump against each other, as we search desperately for a means of escape. We all look down below, where people are fighting each other, we look above, where it is quiet and beautiful, and meanwhile we are cut off by the great dark mass, which will not let us go upwards, but which stands before us as an impenetrable wall; it tries to crush us, but cannot do so yet. I can only cry and implore: 'Oh, if only the black circle could recede and open the way for us!'" </i> <br> <br>
+       Anne says that she’s feeling depressed. She’s easily terrified.
+A ring at the door while Bep is there reminds Anne once again of the constant danger they live in. <br> <br> 
+In bed at night, Anne imagines the Secret Annex burning, or being alone in a jail. </p>
+    </div>
+  </div>
+      <div class="container left">
+    <div class="content">
+      <h2>January 15, 1944</h2>
+      <p><i> "The war goes on just the same, whether or not we choose to quarrel, or long for freedom and fresh air, and so we should try to make the best of our stay here. Now I'm preaching, but I also believe that if I stay here for very long I shall grow into a dried-up old beanstalk. And I did so want to grow into a real young woman!"</i> <br> <br>
+        </p>
+    </div>
+  </div>
+    <div class="container right">
+    <div class="content">
+      <h2>January 28, 1944</h2>
+      <p>Anne thinks about how unselfish their protectors are, to risk their own lives to save the Franks, van Daans, and Mr. Dussel. They have never complained about the burden or discussed fear of what would happen to them if the Secret Annex were discovered—which is probably the same fate as the Jews.
+        
+        <br> <br>
+        The protectors bring the Secret Annex crew news and stories about other Jews in hiding.</p>
+    </div>
+  </div>
+
+    
+    
+    <! love starts from here LOVEEEE ->
+    
+    
+    
+  <div class="container left">
+    <div class="content">
+      <h2>February 14, 1944</h2> 
+      <p> Anne is excited because she notices Peter looking at her and trying not to look at her—basically all of the symptoms of a crush.
+        <br> <br>
+        
+        Peter opens up to Anne a bit about his personal insecurities, like his shyness about talking in front of people.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>February 15, 1944</h2>
+      <p>Peter apologizes to Mr. Dussel for getting mad at him about the radio incident. Anne is impressed that he could say sorry after having been so mad.</p>
+    </div>
+  </div>
+    
+    
+    <div class="container left">
+    <div class="content">
+      <h2>February 16, 1944</h2> 
+      <p> Peter and Anne start to talk for long periods of time. He tries to complete little tasks for her (like getting things out of the attic). They are feeling each other out. They <i>like</i> like each other.
+        <br> <br>
+        
+        Anne begins psychoanalyzing Peter. She thinks he has an inferiority complex and is in desperate need of affection.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>February 18, 1944</h2>
+        <img src="peter-anne.jpg" width=450; height=350;>
+        
+      <p>Anne’s life now has an object: <b>Peter</b>.
+        <br> <br>
+        
+        Anne hopes to run into Peter whenever she goes upstairs. Although she admits she’s not falling in love with him, she has high hopes for a good friendship.</p>
+    </div>
+  </div><div class="container left">
+    <div class="content">
+      <h2>February 19, 1944</h2> 
+      <p> Anne feels lonely and dejected. She cries, longing for Peter, longing for deeper interactions.
+        <br> <br>
+        
+        She’s worried Peter doesn’t like her after all and has just been being polite.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>February 23, 1944</h2>
+      <p>At the end of her journal entry, Anne writes a note to Peter about how happiness cannot be destroyed by bad circumstances. Happiness can be reduced, but it will always be able to return. 
+          <br> <br>
+          <i>"When I looked outside right into the depth of Nature and God, then I was happy, really happy. And Peter, so long as I have that happiness here, the joy in nature, health and a lot more besides, all the while one has that, one can always recapture happiness. <br> <br>
+
+Riches can all be lost, but that happiness in your own heart can only be veiled, and it will still bring you happiness again, as long as you live. As long as you can look fearlessly up into the heavens, as long as you know that you are pure within, and that you will still find happiness." </i></p>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h2>March 3, 1944</h2> 
+      <p> Peter and Anne have a rather silly flirtatious conversation that indicates their growing affection for each other. Every word spoken between them now drips with meaning for Anne. She is heavy into this crush now..</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2> March 6, 1944</h2>
+      <p><i> "Oh, Peter, if only I could help you, if only you would let me! Together we could drive away your loneliness and mine!"</i> <br> <br>
+        
+        Anne longs to be a better friend to Peter and ease his loneliness. She’s very motherly and wants desperately for him to be happy. She also attributes a lot of thoughts and feelings to him and it’s not clear if they’re really in his mind or not. <br> <br>
+Anne is greatly enjoying the challenge of trying to draw Peter out (and get him to fall in love with her).</p>
+    </div>
+  </div>
+    
+    
+    
+    
+    
+    <div class="container left">
+    <div class="content">
+      <h2>March 29, 1944</h2> 
+      <p> 
+          <b>Anne gets the idea to publish her diary after war.</b> <br> <br> <br>Anne hears a suggestion on the news that after the war, people will be quite interested in reading diaries of how people lived during the war. Anne thinks this is funny since she has been keeping a diary faithfully.
+She gets excited about the idea of publishing her journal and starts describing the kind of war events she thinks readers might be interested in.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2> March 6, 1944</h2>
+      <p>
+          <b>Close call: Burglars and Police</b> <br> <br> <br>
+          Somebody tries to break into the office again and the men go downstairs to investigate. Stupidly, Mr. van Daan yells "police" trying to scare them away. <br> <br>
+A plank to the door of their secret hiding place gets busted by the intruder. <br> <br>
+Then a married couple comes along and shines a light inside and the men are turned from police to burglars. <br> <br>
+The men come upstairs to wait, assuming that the married couple will call the police. <br> <br>
+Finally they call Mr. Kleiman. Jan and Miep show up to fix the broken plank. <br> <br>
+Changes are made in everybody’s behavior. They can’t open any windows anymore or flush the toilet after 9:30pm. <br> <br>
+Everyone is concerned about whether the neighbors can be trusted. <br> <br>
+Mr. Kugler is mad that the men went downstairs at all, reminding them that they are Jews and their lives are at stake. <br> <br>
+Anne is more scared of death now. The burglary is a dose of reality and she’s hoping very much that she’ll live through the war.</p>
+    </div>
+  </div>
+    
+    
+    <div class="container left">
+    <div class="content">
+      <h2>April 28, 1944</h2> 
+      <p> <b>Anne and Peter kiss.</b> <br> <br> <br>
+          Anne describes her two selves: one is outgoing and amusing, the other is shy and desperately wants to be loved. <br> <br>
+The second, more tender Anne came out while she was with Peter, but she’s not even sure if he noticed, which bothers her. <br> <br>
+They actually kiss on the lips, although it’s not clear if that was really the original plan.
+Anne thinks deep and hard about whether what she is doing with Peter is right. She feels utterly torn. She desires the closeness desperately but does not feel he would be the right man to marry, so is the intimacy of their relationship okay or not? <br> <br>
+Anne recognizes Peter’s weaknesses: he’s emotionally younger than his age, and lacks courage and character. <br> <br>
+Anne worries that she’s giving too much of herself to him too soon, and maybe she should be saving herself for Mr. Right, not Peter van Daan.</p>
+    </div>
+  </div>
+    
+  <div class="container right">
+    <div class="content">
+      <h2>June 6, 1944</h2>
+      <p><b>D-Day invasion brings hope.</b> <br> <br> <br>
+          D-Day! The invasion has begun. The British are invading France. <br> <br>
+The Secret Annex listens to a lot of radio, including a speech by Eisenhower. <br> <br>
+Anne is so excited and wonders if 1944 will bring an end to the war. <br> <br>
+The invasion seems to be going well, and Anne gives some interesting details about the number of planes in use and how many tons of bombs are being dropped.</p>
+    </div>
+  </div>
+    
+    
+    <div class="container left">
+    <div class="content">
+      <h2>June 13, 1944</h2> 
+      <p> <b>Anne turns 15..</b> <br> <br> <br>
+          Anne has a mini birthday celebration and receives a number of gifts. <br> <br>Anne reviews her faults and wonders if she is as arrogant as people think. She’s determined to change and tries to refute her accusers’ arguments against her character. She takes criticism very deeply to heart. <br> <br>
+Anne thinks Peter loves her as a friend, not as a girlfriend. She feels like he isn’t sharing his whole self with her and can’t understand why he’s holding back. <br> <br>
+Anne is aching to be outdoors and in nature. She feels that nature is rejuvenating and restores her courage.<br> <br>
+Anne is an early feminist. She’s wondering why women have always been considered inferior to men, and why women have gone along with it for so long. She’s angry that her culture values the suffering of male soldiers, but not the pain of women who bear children for the continuation of the human race.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2> July 6, 1944</h2>
+      <p> <b>Anne sees fault in Peter.</b> <br> <br> <br>
+          Anne despairs of Peter’s weak character. Why can’t he improve himself? He’s always looking for the easy way out. <br> <br>
+Peter is starting to depend on Anne too much, which she doesn’t like at all. <br> <br>
+She doesn’t understand Peter. He is lazy. Why doesn’t he like to work or make goals for himself? Like tons of women before her and tons of women after her, Anne wonders, what’s wrong with him? <br> <br>
+Peter isn’t religious and even ridicules it. This bothers Anne as well. She isn’t extremely religious, but values religion because it encourages people to live a better life..</p>
+    </div>
+  </div>
+     <div class="container left">
+    <div class="content">
+      <h2>July 21, 1944</h2> 
+      <p> <b>An assassination attempt on Hitler.</b> <br> <br> <br>
+          Good news: somebody has tried to kill Hitler. Unfortunately, Hitler managed to get away with just a few scratches and burns. But it shows that a lot of generals and officers are sick of the war, too. Maybe it’ll make the war end sooner. <br> <br>
+Hitler lets his army know that they may shoot anybody who was involved in this attempt on his life… without a trial.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2> August 1, 1944</h2>
+      <p>  <b>Anne's last Diary Entry.</b> <br> <br> <br>
+          <i>"Finally I twist my heart round again, so that the bad is on the outside and the good is on the inside, and keep on trying to find a way of becoming what I would so like to be, and what I could be, if... there weren't any other people living in the world."</i> <br> <br>
+        
+        Anne reflects on the fact that her personality is a "bundle of contradictions." <br> <br>She is a dual personality but she never shows the nicer, softer, gentler inside Anne to people—they only see the frolicsome, flirty, easy-going outside Anne. <br> <br>
+She says that when she tries to show her more quiet and serious side, everyone thinks she’s either in a sour mood or sick and pumps her full of medicine.</p>
+    </div>
+  </div>
+</div>
+</section>
+    
+    <footer><p style="color:aliceblue">References : <br>
+    Shmoop Editorial Team. (2008, November 11). The Diary of Anne Frank Thursday, October 29, 1942 Summary. Retrieved February 7, 2019, from https://www.shmoop.com/diary-of-anne-frank/thursday-october-29-1942.html</p></footer>
+    
+</body>
+</html>
